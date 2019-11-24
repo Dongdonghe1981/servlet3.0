@@ -23,6 +23,7 @@ public class UserListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent arg0) {
 		// TODO Auto-generated method stub
 		System.out.println("UserListener...contextInitialized..");
+		
 	}
 
 }
