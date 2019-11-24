@@ -13,7 +13,19 @@ public class HelloServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException {
+		
+		System.out.println(Thread.currentThread() + "start...");
+		try {
+			sayHello();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		response.getWriter().write("hello");
+		System.out.println(Thread.currentThread() + "end...");
 	}
-
+	
+	public void sayHello() throws InterruptedException {
+		System.out.println(Thread.currentThread() + "processing...");
+		Thread.sleep(3000);
+	}
 }
